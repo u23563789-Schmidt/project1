@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Apex Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        padding: 32px 16px;
+      }
+
+      .contact-wrap {
+        width: min(980px, 100%);
+        background: rgba(255,255,255,0.7);
+        border: 1px solid rgba(148,163,184,0.15);
+        border-radius: 26px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .contact-header {
+        background: linear-gradient(180deg, #101827 0%, #162334 100%);
+        color: white;
+        padding: 28px 30px;
+      }
+
+      .contact-body {
+        display: grid;
+        grid-template-columns: 1.1fr 1.2fr;
+        gap: 24px;
+        padding: 30px;
+        background: #f8faff;
+      }
+
+      .info-card,
+      .form-card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .mini-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        background: rgba(79,70,229,0.12);
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      form {
+        display: grid;
+        gap: 16px;
+      }
+
+      .field-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      label {
+        display: grid;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid #dfe7f3;
+        border-radius: 12px;
+        padding: 12px 14px;
+        font: inherit;
+        background: #f9fbff;
+      }
+
+      textarea {
+        min-height: 130px;
+        resize: vertical;
+      }
+
+      @media (max-width: 720px) {
+        .contact-body,
+        .field-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-wrap">
+      <header class="contact-header">
+        <p class="eyebrow" style="color: rgba(255,255,255,0.7);">Contact us</p>
+        <h1 style="color: white;">Let’s build something great.</h1>
+      </header>
+
+      <div class="contact-body">
+        <section class="info-card">
+          <h2>Get in touch</h2>
+          <p class="muted" style="color: var(--muted); margin-bottom: 0;">We respond within one business day.</p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="mini-icon">✉</div>
+              <div>
+                <strong>Email</strong><br />
+                <span>hello@apexanalytics.com</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="mini-icon">☎</div>
+              <div>
+                <strong>Phone</strong><br />
+                <span>+1 (415) 520-8241</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="mini-icon">⌂</div>
+              <div>
+                <strong>Office</strong><br />
+                <span>1567 Market Street, Suite 420</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <form>
+            <div class="field-grid">
+              <label>
+                First name
+                <input type="text" placeholder="Your first name" />
+              </label>
+              <label>
+                Last name
+                <input type="text" placeholder="Your last name" />
+              </label>
+            </div>
+
+            <label>
+              Email address
+              <input type="email" placeholder="name@email.com" />
+            </label>
+
+            <label>
+              Message
+              <textarea placeholder="Tell us a bit about your project..."></textarea>
+            </label>
+
+            <button class="primary-btn" type="submit">Send message</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
